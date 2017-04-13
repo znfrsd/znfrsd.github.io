@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>背景属性的练习</title>
+	<style>
+	body{
+		background-image: url(01.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100%;
+		min-height: 800px;
+	}{
+		width: 1000px;	
+		padding: 0;
+	    margin: 10px auto ;
+	}
+	.clearfix::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+ 	header{
+ 		border: 1px solid #00f;
+ 		height: 100px;
+ 	}
+ 	aside{
+ 		border: 1px solid #fff;
+ 		height: 300px;
+ 		width: 200px;
+ 		float: left;
+ 		margin: 2px 0px;
+ 	}
+ 	main{
+ 		border: 1px solid #0f0;
+ 		height: 300px;
+ 		width: 1677px;
+ 		float: right;
+ 		margin: 2px 0px 2px 4px ;
+ 	}
+ 	footer{
+ 		border: 1px solid #544445;
+ 		height: 200px;
+ 		width: auto;
+ 	}
+	
+	</style>	
+</head>
+<body>
+<header>header</header>
+	<section  class="clearfix">
+		<aside>aside</aside>
+
+		<main>main</main>
+	</section>
+	<footer>footer</footer>
+</body>
+</html>
