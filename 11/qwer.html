@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>超链接样式测试</title>
+	<style>
+body{
+		background-image: url(01.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100%;
+		min-height: 800px;
+	}{
+		width: 1000px;	
+		padding: 0;
+	    margin: 10px auto ;
+	}
+	.clearfix::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+ 	header{
+ 		border: 1px solid #00f;
+ 		height: 100px;
+ 	}
+ 	aside{
+ 		border: 1px solid #fff;
+ 		height: 300px;
+ 		width: 200px;
+ 		float: left;
+ 		margin: 2px 0px;
+ 	}
+ 	main{
+ 		border: 1px solid #0f0;
+ 		height: 300px;
+ 		width: 1677px;
+ 		float: right;
+ 		margin: 2px 0px 2px 4px ;
+ 	}
+ 	footer{
+ 		border: 1px solid #544445;
+ 		height: 200px;
+ 		width: auto;
+ 	}
+ 	a{
+				color: blue;
+			}
+			a:hover{
+				color: black;
+			}
+	</style>	
+</head>
+<body>
+<header>
+<a href="https://www.baidu.com/index.php?tn=02049043_62_pg">百度</a>
+</header>
+	<section  class="clearfix">
+		<aside>
+			<a href="http://www.4399.com/">4399</a>
+		</aside>
+
+		<main>
+		<a href="http://www.qq.com/?pgv_ref=sogoubrowser">腾讯网</a></main>
+	</section>
+	<footer>
+		<a href="http://www.youku.com/">优酷</a>
+	</footer>
+</body>
+</html>
