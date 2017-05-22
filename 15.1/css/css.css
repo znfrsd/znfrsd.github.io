@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+body{
+    background: url(../img/bg.jpg) center top fixed;
+    min-height: 1200px;
+    color: #FFFFFFFF;
+}
+.wrapper{
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+}
+header{
+    position: relative;
+    margin: 30px 0px;
+}
+.logo h1{
+    display: none;
+}
+.logo img{
+    width: 80px;
+    height: auto;
+}
+.mainNav{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.mainNav ul li{
+    float: left;
+    margin: 20px 30px;
+}
+.mainNav ul li a{
+    text-decoration: none;
+    color: #1E90FF;
+    padding: 20px;
+    border: 1px solid transparent;
+    transition: color .5s,border .5s;
+}
+.mainNav ul li a:hover{
+    color: #000;
+    border: 1px solid #1E90FF;
+}
+header h2{
+    margin: 50px 0;
+    font-size: 30px;
+}
+p a{
+    border-bottom:1px dashed #1E90FF;
+    padding-bottom: 4px;
+    transition: border .5s;
+}
+p a:hover{
+    border-bottom:1px solid #000;
+}
+main section ul li{
+	float: left;
+	margin: 25px;
+}
+main section ul li a{
+	padding:20px 60px;
+	background-color:#A4D3EE;
+	transition: all 0.5s;
+	border-radius:10px ;
+	color: black;
+}
+main section ul li a:hover{
+	background-color:#CD0000;
+	border-radius:0px ;
+}
+main section .xiang figure{
+	float: left;
+	position: relative;
+}
+main section .xiang figure a img{
+	position: relative;
+	z-index: 1;
+	width:250px;
+	
+}
+main section .xiang figure a img::before{
+	content: "";
+	position:relative;
+	width:250px;
+	height:100px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,1);
+	
+	z-index: 2;}
+main section .xiang figure:hover a img{
+	-webkit-filter: grayscale(0); 
+	-moz-filter: grayscale(0); 
+	-ms-filter: grayscale(0); 
+	-o-filter: grayscale(0);
+	filter: grayscale(0); 
+}
+main section .xiang figure figcaption{
+	position:absolute;
+	color: #CD00CD;
+	z-index: 2;
+	margin: 10% 35%;
+	opacity: 0;
+	transition: all 0.5s;
+	}
+main section .xiang figure:hover figcaption{
+	opacity: 1;
+}
