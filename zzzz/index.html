@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		#banner{
+			width: 800px;
+			height: 700px;
+			margin: 0 auto;	
+			text-indent: -999em;
+		}
+	</style>
+	</head>
+	<body id="bd">
+	<div id="banner"style="display:block;width:70%;"></div>
+	<script type="text/javascript">	
+		var sStr="jojo1.jpg|jojo2.jpg|jojo3.jpg|jojo4.jpg|jojo5.jpg";
+		var aStr=sStr.split("|");
+		var oBanner=document.getElementById('banner');
+		var num=parseInt(Math.random()*5);  
+		oBanner.style.backgroundImage="url(img/"+aStr[num]+")";		
+	</script>
+</body>
+</html>
