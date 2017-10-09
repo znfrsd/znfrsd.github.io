@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	</head>
+	<body>
+		<div>
+			<h1>请选择Ultraman人数</h1>
+			<input type="text" name="" id="textstar" value="" />
+			<input type="button" name="" id="start" value="开始" onclick="stars()" />
+			<input type="button" name="" id="btnend" value="结束" onclick="stop()"/><br />
+			<input type="text" name="" id="textend" value="" />
+		</div>
+		<script type="text/javascript">
+			var textstar=document.getElementById("textstar");
+			var start=document.getElementById("star");
+			var btnend=document.getElementById("btnend");
+			var textend=document.getElementById("textend");
+			var a;
+			var strs="Ultraman，Zoffy，Seven，Jack，Ace，Ultra Father，Taro，Ultra Mother，Leo，Astra，Ultraman King，Jonias，80，Yullian，Scott，Chuck，Beth，Great，Powerd，Zearth，Tiga，Dyna，Gaia，Agul，Nice，Neo，Seven 21，Cosmos，Justice，Legend，Noa，Nexus，Next，Max，Xenon，Mebius，Hikari，Zero，Ginga，Victory，X，Orb，Geed，Gagula";
+			
+			var arrResult;
+			var num;
+			function luck () {
+				str=strs.split("，");
+				var num=Number(textstar.value);
+				var arrResult=new Array();
+				var str=strs.split("，");
+				if(num==0||isNaN(num)){
+					num=3;
+				}
+				for(var i=0;i<num;i++){
+					var index=parseInt(Math.random()*str.length);
+					arrResult.push(str[index]);
+					arrResult.splice(index,1);
+				}
+				textend.value=arrResult.join(" ");
+			}
+			function stars () {
+				a=setInterval("luck()",100);
+
+			}
+			function stop () {
+				window.clearInterval(a);
+
+			}
+		</script>
+	</body>
+</html>
